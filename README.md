@@ -1,4 +1,4 @@
-# Residence-Ia
+# Residence-Ia (en)
 A [Sails](http://sailsjs.org) application
 
 This application promises control and management modules developed with arduino, with the purpose of having greater control over the modules as a display of the status of all integrated devices in the application.
@@ -13,7 +13,9 @@ and 'bower install'
 
 start the project 'sails lift'
 
-# Residencia-Ia
+# Residencia-Ia (pt-br)
+
+Um aplicativo em [Sails](http://sailsjs.org)
 
 Esta aplicação promete o controle e gerenciamento de modulos desenvolvidos com arduino, tendo a finalidade de ter uma maior controle sobre os modulos como uma visualização dos status de todos os dispositivos integrados na aplicação.
 
