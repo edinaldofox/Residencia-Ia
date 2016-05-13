@@ -5,15 +5,15 @@ This application promises control and management modules developed with arduino,
 
 If you are working with arduino an optimal opportunity and facility for your projects.
 
-To install user 'sudo npm -g install sails' [Sails](http://sailsjs.org/get-started)
+To install user '<strong>sudo npm -g install sails</strong>' [Sails](http://sailsjs.org/get-started)
 
-To install user 'npm install' [Npm](https://docs.npmjs.com/cli/install)
+To install user '<strong>npm install</strong>' [Npm](https://docs.npmjs.com/cli/install)
 
-To install user 'npm install -g bower' [Bower](http://bower.io/#install-bower)
+To install user '<strong>npm install -g bower</strong>' [Bower](http://bower.io/#install-bower)
 
-and 'bower install'
+And '<strong>bower install</strong>'
 
-start the project 'sails lift'
+Start the project '<strong>sails lift</strong>'
 
 # Residencia-Ia (pt-br)
 
@@ -23,12 +23,12 @@ Esta aplicação promete o controle e gerenciamento de modulos desenvolvidos com
 
 Se você esta trabalhando com arduino uma otima oportunidade e facilidade para os seus projetos.
 
-Para instalar user 'sudo npm -g install sails' [Sails](http://sailsjs.org/get-started)
+Para instalar user '<strong>sudo npm -g install sails</strong>' [Sails](http://sailsjs.org/get-started)
 
-Para instalar user 'npm install' [Npm](https://docs.npmjs.com/cli/install)
+Para instalar user '<strong>npm install</strong>' [Npm](https://docs.npmjs.com/cli/install)
 
-Para instalar user 'npm install -g bower' [Bower](http://bower.io/#install-bower)
+Para instalar user '<strong>npm install -g bower</strong>' [Bower](http://bower.io/#install-bower)
 
-e 'bower install'
+E '<strong>bower install</strong>'
 
-start o projeto 'sails lift'
+Start o projeto '<strong>sails lift</strong>'
