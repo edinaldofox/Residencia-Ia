@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Residencia Ia v1.0.0</a>
+            <a class="navbar-brand" href="/"><%= __('Residencia Ia') %> v1.0.0</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -20,45 +20,36 @@
                     <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-messages">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                            </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
+                    <% if (messages.length) { %>
+                    <% for(var i=0; i < messages.length; i++) { %>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong><%=messages[i].title %></strong>
+                                        <span class="pull-right text-muted">
+                                            <em>
+                                                <%=messages[i].createdAt.getDate() %> /
+                                                <% if (messages[i].createdAt.getMonth() < 9) { %>0<% } %><%=messages[i].createdAt.getMonth()+1 %>
+                                                / <%=messages[i].createdAt.getFullYear() %>
+                                            </em>
+                                        </span>
+                                </div>
+                                <div><%=messages[i].description %></div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                    <% } %>
+                    <% } else { %>
+                        <li>
+                            <a href="#">
+                                <div><%= __('Nenhuma mensagem no momento') %>!</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                    <% } %>
                     <li>
                         <a class="text-center" href="#">
-                            <strong>Read All Messages</strong>
+                            <strong><%= __('Visualizar todas as mensagens') %></strong>
                             <i class="fa fa-angle-right"></i>
                         </a>
                     </li>
@@ -239,25 +230,25 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="/"><i class="fa fa-home fa-fw"></i> Home</a>
+                        <a href="/"><i class="fa fa-home fa-fw"></i> <%= __('Home')%></a>
                     </li>
                     <li>
-                        <a href="#mensagem"><i class="fa fa-comments fa-fw"></i> Mensagens</a>
+                        <a href="#mensagem"><i class="fa fa-envelope fa-fw"></i> <%= __('Mensagens')%></a>
                     </li>
                     <li>
-                        <a href="#agendamento"><i class="glyphicon glyphicon-calendar fa-fw"></i> Agendamentos</a>
+                        <a href="#agendamento"><i class="glyphicon glyphicon-calendar fa-fw"></i> <%= __('Agendamentos')%></a>
                     </li>
                     <li>
-                        <a href="#alertas"><i class="glyphicon glyphicon-alert fa-fw"></i> Alertas</a>
+                        <a href="#alertas"><i class="glyphicon glyphicon-alert fa-fw"></i> <%= __('Alertas')%></a>
                     </li>
                     <li>
-                        <a href="#usuarios"><i class="glyphicon glyphicon-user fa-fw"></i> Usuarios</a>
+                        <a href="#usuarios"><i class="glyphicon glyphicon-user fa-fw"></i> <%= __('Usuarios')%></a>
                     </li>
                     <li>
-                        <a href="#configuracoes"><i class="fa fa-gear fa-fw"></i> Configurações</a>
+                        <a href="#configuracoes"><i class="fa fa-gear fa-fw"></i> <%= __('Configurações')%></a>
                     </li>
                     <li>
-                        <a href="#sair"><i class="fa fa-sign-out fa-fw"></i> Sair</a>
+                        <a href="#sair"><i class="fa fa-sign-out fa-fw"></i> <%= __('Sair')%></a>
                     </li>
                 </ul>
             </div>
@@ -269,7 +260,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Home</h1>
+                <h1 class="page-header"><%= __('Home')%></h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -280,17 +271,17 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3">
-                                <i class="fa fa-comments fa-5x"></i>
+                                <i class="fa fa-envelope fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">26</div>
-                                <div>Mensagens!</div>
+                                <div class="huge"><%= countMensage %></div>
+                                <div><%= __('Mensagens')%>!</div>
                             </div>
                         </div>
                     </div>
                     <a href="#">
                         <div class="panel-footer">
-                            <span class="pull-left">Mais Detalhes</span>
+                            <span class="pull-left"><%= __('Mais Detalhes') %></span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -305,14 +296,14 @@
                                 <i class="glyphicon glyphicon-calendar fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">12</div>
-                                <div>Agendamentos!</div>
+                                <div class="huge"><%= countSchedules %></div>
+                                <div><%= __('Agendamentos') %>!</div>
                             </div>
                         </div>
                     </div>
                     <a href="#">
                         <div class="panel-footer">
-                            <span class="pull-left">Mais Detalhes</span>
+                            <span class="pull-left"><%= __('Mais Detalhes') %></span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -327,14 +318,14 @@
                                 <i class="glyphicon glyphicon-alert fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">0</div>
-                                <div>Alertas!</div>
+                                <div class="huge"><%= countAlert %></div>
+                                <div><%= __('Alertas') %>!</div>
                             </div>
                         </div>
                     </div>
                     <a href="#">
                         <div class="panel-footer">
-                            <span class="pull-left">Mais Detalhes</span>
+                            <span class="pull-left"><%= __('Mais Detalhes') %></span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
@@ -349,14 +340,14 @@
                                 <i class="glyphicon glyphicon-user fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">2</div>
-                                <div>Usuários registrados!</div>
+                                <div class="huge"><%= countUsers %></div>
+                                <div><%= __('Usuários registrados') %>!</div>
                             </div>
                         </div>
                     </div>
                     <a href="#">
                         <div class="panel-footer">
-                            <span class="pull-left">Mais Detalhes</span>
+                            <span class="pull-left"><%= __('Mais Detalhes') %></span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                             <div class="clearfix"></div>
                         </div>
