@@ -1,4 +1,17 @@
 {
-  	"Mensagens": "Message",
-	"A brand new app.": "A brand new app."
+  "Residencia Ia": "Residence Ia",
+  "Home": "Home",
+  "Mensagens": "Messages",
+  "Agendamentos": "Agendamentos",
+  "Usuarios": "Users",
+  "Configurações": "Settings",
+  "Sair": "Sair",
+  "Mais Detalhes": "view details",
+  "Agendamentos": "Schedules",
+  "Usuários registrados": "Registered users",
+  "Alertas": "Alert",
+  "Nenhuma mensagem no momento": "Messege not found",
+  "Visualizar todas as mensagens": "View all messege",
+  "Notificações do painel": "Notifications Panel",
+  "Perfil do usuário": "User Profile"
 }

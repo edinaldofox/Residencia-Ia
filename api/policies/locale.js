@@ -9,6 +9,7 @@
  */
 module.exports = function locale(req, res, next) {
 
+  // 'pt_br', 'en', 'es', 'fr', 'de'
   req.setLocale('pt_br');
 
   next();
