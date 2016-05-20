@@ -1,9 +1,11 @@
 language: node_js
 node_js:
-  - "5"
-before_script:
-  - npm install -g gulp
-script: gulp
-
-services:
-  - localDiskDb
+  - "4"
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
