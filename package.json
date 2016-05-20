@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
+  "sails": {
+    "isHook": true
+  },
   "keywords": [],
   "dependencies": {
     "bcrypt": "^0.8.6",
@@ -27,7 +30,8 @@
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "mocha test/bootstrap.test.js test/**/*.test.js"
   },
   "main": "app.js",
   "repository": {
@@ -35,11 +39,22 @@
     "url": "git://github.com/edinaldo/residencia.git"
   },
   "author": "edinaldo",
-  "license": "",
+  "license": "ISC",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "express": "^4.13.4",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-minify": "0.0.11",
-    "gulp-rename": "^1.2.2"
+    "gulp-rename": "^1.2.2",
+    "sails-test-helper": "^0.5.0",
+    "supertest": "^1.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/edinaldo/residencia/issues"
+  },
+  "homepage": "https://github.com/edinaldo/residencia#readme",
+  "directories": {
+    "test": "test"
   }
 }

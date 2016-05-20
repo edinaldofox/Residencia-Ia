@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#dataTables").DataTable({responsive:!0,processing:!0,serverSide:!0,searching:!1,ordering:!0,ajax:"/user/table",columns:[{data:"id"},{data:"name"},{data:"email"},{data:"foneOne"},{data:"foneTwo"},{data:"active"}]})});

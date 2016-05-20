@@ -11,14 +11,27 @@ gulp.task('move-js', function() {
         'bower_components/metisMenu/dist/metisMenu.min.js',
         'bower_components/raphael/raphael.min.js',
         'bower_components/morrisjs/morris.min.js',
+        'bower_components/datatables/media/js/jquery.dataTables.min.js',
+        'bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js',
+        'bower_components/datatables-responsive/js/dataTables.responsive.js',
         'bower_components/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js',
-        'scripts/morris-data.js',
-        'scripts/index.js',
         ])
         .pipe(concat('min-min.js'))
 
         .pipe(gulp.dest('assets/js'));
 
+});
+
+gulp.task('move-js-per', function() {
+
+    return gulp.src('scripts/*.js')
+        .pipe(minify({
+            ext:{
+                min:'.js',
+                src:'-debug.js'
+            }
+        }))
+        .pipe(gulp.dest('assets/js'));
 });
 
 gulp.task('move-css', function() {
@@ -29,10 +42,20 @@ gulp.task('move-css', function() {
         'bower_components/startbootstrap-sb-admin-2/dist/css/timeline.css',
         'bower_components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css',
         'bower_components/morrisjs/morris.css',
-        'bower_components/font-awesome/css/font-awesome.min.css'
+        'bower_components/font-awesome/css/font-awesome.min.css',
+        'bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css',
+        'bower_components/datatables-responsive/css/dataTables.responsive.css',
         ])
         .pipe(concat('min.css'))
         .pipe(gulp.dest('assets/styles'));
+
+});
+
+gulp.task('move-img', function() {
+
+    return gulp.src([
+        'bower_components/datatables/media/images/*.png',
+    ]).pipe(gulp.dest('assets/images'));
 
 });
 
@@ -54,7 +77,7 @@ gulp.task('move-fonts', function() {
 
 });
 
-gulp.task('default', ['move-js', 'move-css', 'move-fonts'], function() {
+gulp.task('default', ['move-js', 'move-js-per', 'move-css', 'move-img', 'move-fonts'], function() {
     // place code for your default task here
 });
 

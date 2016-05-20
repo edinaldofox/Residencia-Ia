@@ -4,7 +4,7 @@ var resp = null;
 
 exports.load = function (res) {
     resp = res;
-
+    list.script = "index";
     exports.countMensage();
 }
 
@@ -16,17 +16,8 @@ exports.countMensage = function () {
 
         list.countMensage = found;
 
-        exports.mensages();
-
-    });
-
-}
-
-exports.mensages = function () {
-
-    Message.find({ where: { active: true }, limit: 3}, function(erro, rows) {
-        list.messages = rows;
         exports.countSchedules();
+
     });
 
 }

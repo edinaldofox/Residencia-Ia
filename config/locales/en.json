@@ -2,7 +2,6 @@
   "Residencia Ia": "Residence Ia",
   "Home": "Home",
   "Mensagens": "Messages",
-  "Agendamentos": "Agendamentos",
   "Usuarios": "Users",
   "Configurações": "Settings",
   "Sair": "Sair",
@@ -13,5 +12,7 @@
   "Nenhuma mensagem no momento": "Messege not found",
   "Visualizar todas as mensagens": "View all messege",
   "Notificações do painel": "Notifications Panel",
-  "Perfil do usuário": "User Profile"
+  "Perfil do usuário": "User Profile",
+  "Pesquisar": "Search",
+  "lista de dados": "Data List for"
 }

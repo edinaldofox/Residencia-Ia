@@ -35,8 +35,27 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  // Index
   'get /': 'IndexController.index',
-  'get /icon': 'IndexController.icon'
+
+  // Alert
+  'get /alert/list': 'AlertController.list',
+  'get /alert/table': 'AlertController.table',
+
+  // Message
+  'get /message/list': 'MessageController.list',
+  'get /message/table': 'MessageController.table',
+
+  // Schedule
+  'get /schedule/list': 'ScheduleController.list',
+  'get /schedule/table': 'ScheduleController.table',
+
+  // User
+  'get /user/list': 'UserController.list',
+  'get /user/table': 'UserController.table',
+
+  // Setting
+  'get /setting/list': 'SettingController.list'
 
   /***************************************************************************
   *                                                                          *

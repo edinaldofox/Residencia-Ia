@@ -18,15 +18,14 @@
 
 
 module.exports.policies = {
-
   /***************************************************************************
-  *                                                                          *
-  * Default policy for all controllers and actions (`true` allows public     *
-  * access)                                                                  *
-  *                                                                          *
-  ***************************************************************************/
-
-  //'*': true,
+   *                                                                          *
+   * Default policy for all controllers and actions (`true` allows public     *
+   * access)                                                                  *
+   *                                                                          *
+   ***************************************************************************/
+  //'*': false,
+  '*': ['locale', 'notices', 'pagination'],
 
   /***************************************************************************
   *                                                                          *
@@ -35,8 +34,8 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
     indexController: {
-      '*': true,
-      index : ['locale']
+    },
+    AlertController: {
     },
 	RabbitController: {
 
