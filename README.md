@@ -1,3 +1,5 @@
+<img src="https://travis-ci.org/edinaldofox/Residencia-Ia.svg?branch=master" />
+
 # Residence-Ia (en)
 A [Sails](http://sailsjs.org) application
 
