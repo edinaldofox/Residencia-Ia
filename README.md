@@ -1,4 +1,4 @@
-<a href="https://travis-ci.org/edinaldofox/Residencia-Ia">
+<a href="https://travis-ci.org/edinaldofox/Residencia-Ia" target="_blank">
     <img src="https://travis-ci.org/edinaldofox/Residencia-Ia.svg?branch=master" />
 </a>
 
