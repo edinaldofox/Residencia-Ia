@@ -33,6 +33,9 @@
     "start": "node app.js",
     "test": "mocha test/bootstrap.test.js test/**/*.test.js"
   },
+  "bin": {
+    "coveralls": "./bin/coveralls.js"
+  },
   "main": "app.js",
   "repository": {
     "type": "git",
