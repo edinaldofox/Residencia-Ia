@@ -3,6 +3,8 @@
 </a>
 
 # Residence-Ia (en)
+
+[![Join the chat at https://gitter.im/edinaldofox/Residencia-Ia](https://badges.gitter.im/edinaldofox/Residencia-Ia.svg)](https://gitter.im/edinaldofox/Residencia-Ia?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A [Sails](http://sailsjs.org) application
 
 This application promises control and management modules developed with arduino, with the purpose of having greater control over the modules as a display of the status of all integrated devices in the application.
