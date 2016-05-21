@@ -2,8 +2,6 @@
     <img src="https://travis-ci.org/edinaldofox/Residencia-Ia.svg?branch=master" />
 </a>
 
-[![Gitter](https://badges.gitter.im/edinaldofox/Residencia-Ia.svg)](https://gitter.im/edinaldofox/Residencia-Ia?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 # Residence-Ia (en)
 
 [![Join the chat at https://gitter.im/edinaldofox/Residencia-Ia](https://badges.gitter.im/edinaldofox/Residencia-Ia.svg)](https://gitter.im/edinaldofox/Residencia-Ia?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
