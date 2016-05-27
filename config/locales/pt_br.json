@@ -16,5 +16,16 @@
   "Perfil do usuário": "Perfil do usuário",
   "Alertas": "Alertas",
   "Pesquisar": "Pesquisar",
-  "lista de dados": "Lista de dados para"
+  "lista de dados": "Lista de dados para",
+  "Cadastrar novo usuário": "Cadastrar novo usuário",
+  "Cadastro de usuário": "Cadastro de usuário",
+  "Nome": "Nome",
+  "Email": "Email",
+  "Telefone": "Telefone",
+  "Login": "Login",
+  "Senha": "Senha",
+  "Repetir a Senha": "Repetir a Senha",
+  "Usuario ativo": "Usuário ativo",
+  "Sim": "Sim",
+  "Nao": "Não"
 }

@@ -1,0 +1,20 @@
+<% if(req.flash != null && res.statusCode == 200) { %>
+
+    <% if(req.flash.erros){ %>
+    <% req.flash.erros.forEach(function(erro) { %>
+
+    <div class="alert alert-<%- req.flash.tipo%>">
+        <%-erro%>
+        <button aria-label="Close" data-dismiss="alert" class="close" type="button"><span aria-hidden="true">×</span></button>
+        <br>
+    </div>
+    <% }); %>
+    <% } else { %>
+
+    <div class="alert alert-<%- req.flash.tipo%>">
+        <%- req.flash.mensagem%>
+        <button aria-label="Close" data-dismiss="alert" class="close" type="button"><span aria-hidden="true">×</span></button>
+        <br>
+    </div>
+    <% } %>
+<% } %>
