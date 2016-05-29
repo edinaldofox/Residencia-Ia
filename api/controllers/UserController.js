@@ -42,7 +42,7 @@ module.exports = {
             if (err) {
                 console.log('flash entro no erro');
                 var listaDeErros = [];
-                console.log(User);
+
                 if (err) {
 
                     var Erros = err.Errors;

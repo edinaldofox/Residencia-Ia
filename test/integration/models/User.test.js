@@ -1,3 +1,4 @@
+var id = null
 describe('UserModel', function() {
 
     describe('#find()', function() {
@@ -8,6 +9,32 @@ describe('UserModel', function() {
                     done();
                 })
                 .catch(done);
+        });
+    });
+
+    describe('#save()', function() {
+        it('should save without error', function(done) {
+            var data = {
+                name: 'Pedro22 felipe1222',
+                email: 'luis11231@mail.com',
+                foneOne: '1235-9154',
+                foneTwo: '8789-8484',
+                username:'pablo11212412',
+                password: '123',
+                repeat_password: '123'
+            };
+            User.create(data).exec(function createCB(err, created){
+                if (err) throw err;
+                id = created.id;
+
+                done();
+            });
+        });
+    });
+
+    after(function() {
+        User.destroy({id:id}).exec(function (err){
+            if (err) throw err;
         });
     });
 

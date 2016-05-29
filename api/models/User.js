@@ -59,7 +59,7 @@ module.exports = {
     },
 
     beforeValidate: function (values, cb) {
-console.log(this._validator);
+
         if (values.password !== values.repeat_password) {
             return cb({erro:['Senhas não coincidem']});
         }
