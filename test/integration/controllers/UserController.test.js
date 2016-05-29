@@ -24,4 +24,14 @@ describe('UserController', function() {
         });
     });
 
+    describe('GET /user/create', function() {
+
+        it('respond with html', function(done) {
+
+            request.get("/user/create")
+                .expect(200)
+                .end(done);
+        });
+    });
+
 });
