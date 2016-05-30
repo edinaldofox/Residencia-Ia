@@ -10,7 +10,10 @@ describe('MessageController', function() {
 
             request.get("/user/list")
                 .expect(200)
-                .end(done);
+                .end(function(err, res) {
+                    if (err) return done(err);
+                    done();
+                });
         });
     });
 
@@ -20,7 +23,10 @@ describe('MessageController', function() {
 
             request.get("/message/table")
                 .expect(200)
-                .end(done);
+                .end(function(err, res) {
+                    if (err) return done(err);
+                    done();
+                });
         });
     });
 

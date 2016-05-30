@@ -1,8 +1,8 @@
 $( document ).ready(function() {
 
-   $('#dataTables').DataTable({
-      responsive: true,
-      processing: true,
+   var table = $('#dataTables').DataTable({
+      responsive: false,
+      //processing: true,
       serverSide: true,
       searching: false,
       ordering: true,
@@ -11,12 +11,22 @@ $( document ).ready(function() {
          { data: 'id' },
          { data: 'name' },
          { data: 'email' },
-         { data: 'username' },
-         { data: 'foneOne' },
-         { data: 'foneTwo' },
-         { data: 'password' },
-         { data: 'active' }
-      ]
+         //{ data: 'username' },
+         //{ data: 'phone1' },
+         //{ data: 'phone2' },
+         //{ data: 'password' },
+         //{ data: 'active' },
+          {
+              "targets": -1,
+              "data": null,
+              "defaultContent": "<button>Editar</button>"
+          }
+      ],
    });
+
+    $('#dataTables tbody').on( 'click', 'button', function () {
+        var data = table.row( $(this).parents('tr') ).data();
+        window.location="/user/edit/id/"+data.id;
+    } );
 });
 

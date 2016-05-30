@@ -16,8 +16,16 @@ module.exports = {
             data.recordsFiltered = found;
 
             User.find(req.queryModel, function(erro, rows) {
+                var list = [];
 
-                data.data = rows;
+                for (var i = 0; i < rows.length; i++) {
+                    list[i] = {
+                        id: rows[i].id,
+                        name: rows[i].name,
+                        email: rows[i].email
+                    }
+                }
+                data.data = list;
 
                 return res.json(data);
             });
@@ -34,13 +42,9 @@ module.exports = {
     insert: function (req, res) {
 
         User.create(req.body).exec(function createCB(err, created) {
-            console.log("ERR ----------------: "+err);
-            console.log("ERR ----------------: "+err.Errors);
-            console.log("ERR ----------------: "+err['email']);
-            console.log("ERR ----------------: "+err.erro);
 
             if (err) {
-                console.log('flash entro no erro');
+
                 var listaDeErros = [];
 
                 if (err) {
@@ -62,7 +66,7 @@ module.exports = {
                     tipo: "danger"
                 };
             } else {
-                console.log('flash entro no acerto');
+
                 flash = {
                     erros: null,
                     mensagem: "Sucesso ao salvar os dados",
@@ -74,6 +78,41 @@ module.exports = {
 
             return res.redirect('user/create');
         });
-    }
+    },
+
+    edit: function (req, res) {
+
+        User.find({ where: { id: req.param('id') }}, function(erro, row) {
+
+            return res.view('user/edit', {
+                user:row[0]
+            });
+        });
+
+    },
+
+    update: function (req, res) {
+
+        User.update({id: req.body.id}, req.body).exec(function(erro, row) {
+
+            flash = {
+                erros: null,
+                mensagem: "Sucesso ao salvar os dados",
+                tipo: "success"
+            };
+
+            if (erro) {
+                flash = {
+                    erros: listaDeErros,
+                    mensagem: "Erro ao salvar os dados.",
+                    tipo: "danger"
+                };
+            }
+
+            req.session.flash = flash;
+            return res.redirect('user/edit/id/'+req.body.id);
+        });
+
+    },
 
 };

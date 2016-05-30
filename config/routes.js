@@ -54,6 +54,8 @@ module.exports.routes = {
   'get /user/list': 'UserController.list',
   'get /user/create': 'UserController.create',
   'post /user/create': 'UserController.insert',
+  'get /user/edit/id/:id': 'UserController.edit',
+  'post /user/edit': 'UserController.update',
   'get /user/table': 'UserController.table',
 
   // Setting

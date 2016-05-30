@@ -2,11 +2,6 @@ var bcrypt = require('bcrypt');
 
 module.exports = {
     tableName: 'user',
-    //types: {
-    //    password: function(password) {
-    //        return password === this.repeat_password;
-    //    }
-    //},
     attributes: {
         name: {
             type: 'string',
@@ -32,9 +27,6 @@ module.exports = {
             type: 'string',
             required: true
         },
-        //repeat_password: {
-        //    type: 'string',
-        //},
         active: {
             type: 'boolean',
             required: true,

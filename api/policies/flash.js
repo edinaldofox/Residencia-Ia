@@ -1,11 +1,11 @@
 
 module.exports = function(req, res, next) {
 
-    req.flash = null;
+    res.flash = null;
 
     if(req.session.flash) {
 
-        req.flash = req.session.flash;
+        res.flash = req.session.flash;
         delete req.session.flash;
     }
 

@@ -11,7 +11,10 @@ describe('SettingController', function() {
 
             request.get("/setting/list")
                 .expect(200)
-                .end(done);
+                .end(function(err, res) {
+                    if (err) return done(err);
+                    done();
+                });
         });
     });
 

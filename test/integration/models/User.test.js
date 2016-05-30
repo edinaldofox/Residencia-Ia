@@ -14,6 +14,7 @@ describe('UserModel', function() {
 
     describe('#save()', function() {
         it('should save without error', function(done) {
+
             var data = {
                 name: 'Pedro22 felipe1222',
                 email: 'luis11231@mail.com',
