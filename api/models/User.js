@@ -44,9 +44,15 @@ module.exports = {
         },
         email: {
             required: 'Email é obrigatorio',
-            email: 'Provide valid email address',
+            email: 'Informe um email valido.',
             unique: 'Email já cadastrado'
         },
+        password: {
+            required: 'Senha é obrigatoria.'
+        },
+        active: {
+            required: 'Status de ativo é obrigatorio.'
+        }
 
     },
 
