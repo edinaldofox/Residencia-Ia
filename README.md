@@ -2,6 +2,14 @@
     <img src="https://travis-ci.org/edinaldofox/Residencia-Ia.svg?branch=master" />
 </a>
 
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="64PJHMAS7ABDE">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
 # Residence-Ia (en)
 
 [![Join the chat at https://gitter.im/edinaldofox/Residencia-Ia](https://badges.gitter.im/edinaldofox/Residencia-Ia.svg)](https://gitter.im/edinaldofox/Residencia-Ia?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
